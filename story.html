@@ -30,41 +30,43 @@
         <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body class="landing" onload="setStoryPage()" >
-    <nav class="navbar navbar-fixed-top nav-inverse" role="navigation">  
+    <div class="container-fluid">
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">  
         <div class="navbar-inner top-nav">  
-        <div class="container-fluid">
+        
         <ul class="nav nav-tab"> 
            <li class="active">
-            <a class="brand" href="index.html">
+            <a class="brand bitter" href="index.html">
                 Home</a></li>
         </ul> 
         <ul class="nav nav-tab"> 
            <li class="active">
-            <a class="brand" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
+            <a class="brand bitter" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
                 Filter Sources</a></li>
         </ul>
         <ul class="nav nav-tab">
             <li class="active">
-            <a class="brand" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
+            <a class="brand bitter" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
                 Archive</a></li>
         </ul>
         <ul class="nav nav-tab">
             <li class="active">
-            <a class="brand" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
+            <a class="brand bitter" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
                 Take a survey</a></li>
         </ul>  
         </div>  
-        </div>  
-        </nav>   
+         
+    </nav>
+    </div> Z     
         <div class="container-fluid" id="storypage">
 			<span>
             <h1 class="row-fluid storytitle" id="title"></h1>
-            <input type="text" id="search" size="20" Placeholder="Filter.."/>
+            <input type="text" id="search" size="20" Placeholder="Search.."/>
 			</span>
 			<span>
 				<p class="text-right">
-					<button class="btn" id="light">Light Theme</button>
-					<button class="btn btn-inverse" id="dark">Dark Theme</button>
+					<button class="btn philosopher" id="light">Light Theme</button>
+					<button class="btn btn-inverse philosopher" id="dark">Dark Theme</button>
 				</p>
 			</span>
             <div class="panel-group" id="accordian">

@@ -7,53 +7,74 @@
         <script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
-
+    
         <title>NewsMash</title>
 		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/bootstrap.css"></link>
 		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/mystyle.css"></link>
-		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Bree+Serif' rel='stylesheet' type='text/css'></link>
+    <link rel="stylesheet" href="css/stylesheets/jquery.sidr.dark.css">
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Bree+Serif|Bitter|Playfair+Display|Philosopher|Droid+Serif' rel='stylesheet' type='text/css'></link>
     </head>
     <body class="ver-story landing" onload="test()">
-    	<nav class="navbar navbar-fixed-top nav-inverse" role="navigation">  
+    <div class="container-fluid">
+
+    	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">  
         <div class="navbar-inner top-nav">  
-        <div class="container-fluid">
-        <ul class="nav nav-tab"> 
-           <li class="active">
-            <a class="brand" href="index.html">
-                Home</a></li>
-        </ul> 
-		<ul class="nav nav-tab"> 
-           <li class="active">
-           	<a class="brand" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
-           		Filter Sources</a></li>
-		</ul>
-		<ul class="nav nav-tab">
-            <li class="active">
-            <a class="brand" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
-                Archive</a></li>
-        </ul>
-		<ul class="nav nav-tab">
-            <li class="active">
-            <a class="brand" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
-                Take a survey</a></li>
-        </ul>  
-		</div>  
-        </div>  
-        </nav>  
+        
+            <ul class="nav nav-tab"> 
+               <li class="active">
+                <a class="brand bitter" href="index.html">
+                    Home</a></li>
+            </ul> 
+        		<ul class="nav nav-tab"> 
+                   <li class="active">
+                   	<a class="brand bitter" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
+                   		Filter Sources</a></li>
+        		</ul>
+        		<ul class="nav nav-tab">
+                    <li class="active">
+                    <a class="brand bitter" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
+                        Archive</a></li>
+                </ul>
+        		<ul class="nav nav-tab">
+                    <li class="active">
+                    <a class="brand bitter" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
+                        Take a survey</a></li>
+                </ul>  
+		    </div>  
+      </nav>
+    </div>   
 		<div class="row-fluid"> 
+
 		  <script src="js/jquery.backstretch.min.js"></script>
         <script>
             $.backstretch("img/trianglify-background.jpg", {speed: 500});
         </script>
 		       <br/>
+      <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 			   <br/>
 			   <br/>
               <div class="offset8 span3">
                 <p class="text-right">
-                    <button class="btn" id="light">Light Theme</button>
-                    <button class="btn btn-inverse" id="dark">Dark Theme</button>
+                    <button class="btn philosopher" id="light">Light Theme</button>
+                    <button class="btn btn-inverse philosopher" id="dark">Dark Theme</button>
                 </p>
-        </div>
+              </div>
+
+
+    <p class="banner text-center"> NewsMash </p>
+    <script src="js/jquery.sidr.min.js"></script>
+    <div class="text-center mobile-header">
+    <button class="btn btn-inverse text-center" href="#sidr" id="shiny-sidebar"><p class="philosopher">Learn More</p></button>
+    </div>
+    <div id="sidr">
+    <h1 class="droid">NewsMash is an application that helps users get to the news they want quickly. Newsmash gets news from all across the web programaatically, using content from the New York Times, The Guardian, Twitter and Reddit. Users are thus always kept updated with the latest stories, even as they are breaking. NewsMash is delivered over a CDN and ensures that the load times are minimal.  In addition, the NewsMash Bot (fully open source) is constantly sniffing for news stories. This is a project that is made possible thanks to a lot of existing services. Fork NewsMash on Github if you want to help the news bot become better!
+    </h2>
+    </div>
+    <script>
+    $(document).ready(function() {
+      $('#shiny-sidebar').sidr();
+    });
+    </script> 
 		<div class="span12 category-row">
     	<a href="#myModal" data-toggle="modal" onclick="setTech()" class="span2 offset1">
     	<div class="circle" id="technology"><div class="cat-content"><div>Technology</div></div></div></a>
@@ -66,7 +87,7 @@
 		<a href="#myModal" data-toggle="modal" onclick="setSport()" class="span2">
 		<div class="circle" id="sports"><div class="cat-content"><div>Sports</div></div></div></a>
 		</div>
-	   </div>
+	 </div>
 <div class="modal hide fade overflow-scroll" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
