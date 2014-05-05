@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="generator" content=
+        "HTML Tidy, see www.w3.org" />
+        <meta http-equiv="Content-Type" content=
+        "text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="js/stories.js">
+</script>
+<script type="text/javascript" src="js/main.js">
+</script>
+<script type="text/javascript" src=
+"http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script type="text/javascript" src="css/bootstrap/js/bootstrap.js">
+</script>
+<script type="text/javascript" src="css/bootstrap/js/sumTrends.js">
+</script>
+
+        <title>NewsMash</title>
+        <link type="text/css" rel="stylesheet" href=
+        "css/bootstrap/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href=
+        "css/bootstrap/css/mystyle.css" />
+		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/flaticon.css" />
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    </head>
+    <body class="landing" onload="setStoryPage()" >
+    <nav class="navbar navbar-fixed-top nav-inverse" role="navigation">  
+        <div class="navbar-inner top-nav">  
+        <div class="container-fluid">
+        <ul class="nav nav-tab"> 
+           <li class="active">
+            <a class="brand" href="index.html">
+                Home</a></li>
+        </ul> 
+        <ul class="nav nav-tab"> 
+           <li class="active">
+            <a class="brand" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
+                Filter Sources</a></li>
+        </ul>
+        <ul class="nav nav-tab">
+            <li class="active">
+            <a class="brand" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
+                Archive</a></li>
+        </ul>
+        <ul class="nav nav-tab">
+            <li class="active">
+            <a class="brand" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
+                Take a survey</a></li>
+        </ul>  
+        </div>  
+        </div>  
+        </nav>   
+        <div class="container-fluid" id="storypage">
+			<span>
+            <h1 class="row-fluid storytitle" id="title"></h1>
+            <input type="text" id="search" size="20" Placeholder="Filter.."/>
+			</span>
+			<span>
+				<p class="text-right">
+					<button class="btn" id="light">Light Theme</button>
+					<button class="btn btn-inverse" id="dark">Dark Theme</button>
+				</p>
+			</span>
+            <div class="panel-group" id="accordian">
+            </div>
+        </div>
+
+        <div class="modal hide fade" id="myModal" tabindex="-1"
+        role="dialog" aria-labelledby="myModalLabel" aria-hidden=
+        "true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden=
+                        "true">&times;</button> 
+
+                        <h4 class="modal-title" id="myModalLabel">
+                        Save this story</h4>
+						<p>Add Comments?</p>
+						<input type="text" id="commentText">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class=
+                        "btn btn-default" data-dismiss=
+                        "modal" id="saveButton">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="modal hide fade filter" id="filterModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="filterModalLabel">Sources</h4>
+        <h5><i>Pick the sources you want to include</i></h5>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+        <div class="span6">
+        <div class="col-md-2 input-group-addon list-group">
+         <input type="checkbox" value="reddit" id="reddit" class="list-group-item">
+        <a href="http://www.reddit.com" target="_blank">
+        <img src="css/bootstrap/img/reddit-logo1.png" class="filter-img" alt="Reddit" class="list-group-item" ></img>
+        </a></div>
+        <div class="col-md-2 input-group-addon">
+         <input type="checkbox" value="guardian" id="guardian" class="list-group-item">
+         <a href="http://www.theguardian.com/" target="_blank">
+        <img src="css/bootstrap/img/the-guardian-logo.jpg" class="filter-img" alt="Guardian" class="list-group-item"`></a></img></div>
+        </div>
+        <div class="span6">
+        <div class="col-md-2 input-group-addon">
+         <input type="checkbox" value="nyt" id="nyt" class="list-group-item">
+         <a href="http://www.nytimes.com/" target="_blank">
+        <img src="css/bootstrap/img/the-new-york-times-logo.jpg" class="filter-img" alt="New York Times" class="list-group-item">
+        </a></img></div>
+        <div class="col-md-2 input-group-addon">
+         <input type="checkbox" value="twitter" id="twitter" class="list-group-item">
+         <a href="http://www.twitter.com" target="_blank">
+        <img src="css/bootstrap/img/Twitter-LOGO.png" class="filter-img" alt="Twitter" class="list-group-item"></a></img></div></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveFilter()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide fade filter overflow-scroll" id="archiveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="archiveModalLabel">Archived Stories</h4>
+      </div>
+      <div class="modal-body" id="archiveModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+           $('.collapse').collapse()
+           $('#createInput').click(function(){
+            $('#textarea').html('<input type="text" />');
+            return false;
+            });
+    $('#filterModal').find('.modal-body').css({
+              width:'auto', //probably not needed
+              height:'auto', //probably not needed 
+              'max-height':'100%'
+       });
+	 $('#archiveModal').find('.modal-body').css({
+              width:'auto', //probably not needed
+              height:'auto', //probably not needed 
+              'max-height':'100%'
+       });
+	    $('#filterModal').on('hidden', function () {
+        document.location.reload();
+        });
+	    $("#search").keyup(function () {
+        var userInput = $(this).val();
+        $("#accordian div").map(function (index, value) {
+			//console.log("here");
+        $(value).toggle($(value).text().toLowerCase().indexOf(userInput) >= 0);
+    });
+});
+</script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("img/trianglify-background.jpg", {speed: 500});
+    
+    $("#light").click(function (e) {
+        console.log("In");
+      e.preventDefault();
+      $.backstretch("img/trianglify-background-blue.jpg");
+      console.log("Light Theme Clicked");
+    });
+    
+    $("#dark").click(function (e) {
+      e.preventDefault();
+      $.backstretch("img/trianglify-background.jpg");
+      console.log("Dark Theme Clicked");
+    });
+</script>
+    </body>
+</html>
+
