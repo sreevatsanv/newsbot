@@ -1,0 +1,91 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  trendGetter.py
+#  
+#  Copyright 2014 Sreevatsan Vaidyanathan <watson@dragonPC>
+#  
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#  
+#  
+
+import requests
+import time
+import sched
+try:
+	import simplejson as json
+except ImportError:
+	import json
+
+class getTrends():
+	""" Obtain trends using social APIs """
+	
+	def __init__ (self):
+		""" Class initialiser """
+		self.preprocessedList = set()
+		self.s = sched.scheduler(time.time,time.sleep)
+		self.user_agent = "" #FILL CUSTOM USER AGENT
+		self.bufferJSON = None
+	
+	def getTrendsFaroo (self):
+		""" Get Trends from FAROO API """
+		
+		payload = {'key':'','q':'','src':'trends','i':'true','f':'json','User-Agent':str(self.user_agent)} #FILL CUSTOM FAROO TRENDS KEY
+		response = requests.get("http://faroo.com/api",params=payload)
+		self.bufferJSON = response.json()
+		pass
+		
+	def extractTrends (self):
+		""" Extract new trends and append them to the master list """
+		response_json = self.bufferJSON
+		for trend in response_json['trends']:
+			if str(trend) not in self.preprocessedList:
+				self.preprocessedList.add(str(trend))
+		return None
+		
+	def print_time (self):
+		""" Print the current systime """
+		print(time.time())
+		
+	def accumulateTrends (self,tlimit,delay):
+		""" Accumulate Trends over a period of time. tlimit in Minutes, delay in seconds, user_agent is a string """
+		runLimit = int(tlimit*60/delay)
+		for i in range(1,runLimit+1):
+			self.s.enter((delay*i)-2,1,self.getTrendsFaroo,())
+			self.s.enter(delay*i,1,self.print_time,())
+			self.s.enter(delay*i,1,self.extractTrends,())
+			
+		self.s.run()
+		trendList = []
+		for trend in self.preprocessedList:
+			trendList.append(trend)
+		print(len(trendList))
+		jObject = json.dumps(trendList)
+		f = open("trends.json",'w').close()
+		with open("trends.json",'w') as fObject:
+			fObject.write(jObject)
+		print (self.preprocessedList)
+		
+
+def main():
+	g = getTrends();
+	#g.extractTrends(g.getTrendsFaroo('newsMashHCC'))
+	g.accumulateTrends(90,30)
+	return 0
+
+if __name__ == '__main__':
+	main()
+
