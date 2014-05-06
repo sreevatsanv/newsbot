@@ -61,7 +61,7 @@
         <div class="container-fluid" id="storypage">
 			<span>
             <h1 class="row-fluid storytitle" id="title"></h1>
-            <input type="text" id="search" size="20" Placeholder="Filter.."/>
+            <input type="text" id="search" size="20" Placeholder="Search.."/>
 			</span>
 			<span>
 				<p class="text-right">
