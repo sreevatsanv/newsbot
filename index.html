@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/stories.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="css/bootstrap/js/bootstrap.js"></script>
+    
+        <title>NewsMash</title>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/bootstrap.css"></link>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/mystyle.css"></link>
+		<link rel="stylesheet" href="css/stylesheets/jquery.sidr.dark.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Bree+Serif|Bitter|Playfair+Display|Philosopher|Droid+Serif' rel='stylesheet' type='text/css'></link>
+    </head>
+    <body class="ver-story landing" onload="test()">
+    <div class="container-fluid">
+
+    	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">  
+        <div class="navbar-inner top-nav">  
+        
+            <ul class="nav nav-tab"> 
+               <li class="active">
+                <a class="brand bitter" href="index.html">
+                    Home</a></li>
+            </ul> 
+        		<ul class="nav nav-tab"> 
+                   <li class="active">
+                   	<a class="brand bitter" href="#filterModal" data-toggle="modal" id="linkFilter" onclick="getCheckVal()">
+                   		Filter Sources</a></li>
+        		</ul>
+        		<ul class="nav nav-tab">
+                    <li class="active">
+                    <a class="brand bitter" href="#archiveModal" data-toggle="modal" id="archiveShow"  onclick="getArchive()">
+                        Archive</a></li>
+                </ul>
+        		<ul class="nav nav-tab">
+                    <li class="active">
+                    <a class="brand bitter" href="https://www.surveymonkey.com/s/KPYSGGK" target="_blank">
+                        Take a survey</a></li>
+                </ul>  
+		    </div>  
+      </nav>
+    </div>   
+		<div class="row-fluid"> 
+		      <a href="https://github.com/sreevatsanv/newsbot" target="_blank"><img style="position: absolute; top: 30px; right: 0; border: 0; z-index:1000;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+		  <script src="js/jquery.backstretch.min.js"></script>
+        <script>
+            $.backstretch("img/trianglify-background.jpg", {speed: 500});
+        </script>
+		       <br/>
+
+<<<<<<< HEAD
+=======
+      <a href="https://github.com/sreevatsanv/newsbot" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+>>>>>>> 98779dd9a728ca1c64e048480417a696cdb61588
+			   <br/>
+			   <br/>
+              <div class="offset8 span3">
+                <p class="text-right">
+                    <button class="btn philosopher blue" id="light">Light Theme</button>
+                    <button class="btn btn-inverse philosopher" id="dark">Dark Theme</button>
+                </p>
+              </div>
+
+
+    <p class="banner text-center"> NewsMash </p>
+    <script src="js/jquery.sidr.min.js"></script>
+    <div class="text-center mobile-header">
+    <button class="btn btn-inverse text-center" href="#sidr" id="shiny-sidebar"><p class="philosopher green">Learn More</p></button>
+	<br>
+	<br>
+	<button class="btn btn-inverse text-center" href="#videoModal" data-toggle="modal" id="videocontrol"><p class="philosopher green">Watch Video</p></button>
+    </div>
+    <div id="sidr">
+	<div class="container-fluid">
+	<h3 class="droid">What is NewsMash?</h3>
+    <p class="text-justify">NewsMash is an application that helps users get to the news they want quickly. NewsMash gets news from all across the web by using the services of NewsBot, using content from the New York Times, The Guardian, Twitter and Reddit. This keeps you in the loop with the latest stories, as they are breaking.</p> 
+	<br>
+	<h3 class="droid">How does it work?</h3>
+	<p class="text-justify">
+	NewsBot (open-sourced) is constantly sniffing for news stories. NewsBot finds anything interesting, and then sees if it is newsworthy. Once the bot determines that a trend is good, it automatically classifies the trend, and then asks all its sources if there are any  stories for that trend, and proceeds to neatly display those trends. This is a project that is made possible thanks to a lot of existing services. NewsMash is delivered over a Content Delivery Network to ensure that the load times are minimal. Fork NewsMash on Github if you want to help the news bot become better!
+    </p>
+	</div>
+    </div>
+    <script>
+    $(document).ready(function() {
+      $('#shiny-sidebar').sidr();
+    });
+    </script> 
+		<div class="span12 category-row">
+    	<a href="#myModal" data-toggle="modal" onclick="setTech()" class="span2 offset1 ">
+    	<div class="circle animated fadeInLeftBig" id="technology"><div class="cat-content"><div>Technology</div></div></div></a>
+		<a href="#myModal" data-toggle="modal" onclick="setEntertain()" class="span2">
+	    <div class="circle animated fadeInUpBig" id="entertainment"><div class="cat-content"><div>Entertainment</div></div></div></a>
+		<a href="#myModal" data-toggle="modal" onclick="setFin()" class="span2">
+	    <div class="circle animated slideInDown" id="finance"><div class="cat-content"><div>Finance</div></div></div></a>
+		<a href="#myModal" data-toggle="modal" onclick="setPol()" class="span2">
+	    <div class="circle animated fadeInUpBig" id="politics"><div class="cat-content"><div>Politics</div></div></div></a>
+		<a href="#myModal" data-toggle="modal" onclick="setSport()" class="span2">
+		<div class="circle animated fadeInRightBig" id="sports"><div class="cat-content"><div>Sports</div></div></div></a>
+		</div>
+		<br>
+		<br>
+		<br>
+	 </div>
+<div class="modal hide fade filter overflow-scroll modal-large" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="videoModalLabel">Hi, I'm NewsBot</h4>
+      </div>
+      <div class="modal-body" id="videoModalBody">
+		<div class=container-fluid">
+			<div class="text-center">
+				<video src="img/intro.webm" preload=auto controls autoplay muted></video>
+			</div>
+	    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide fade overflow-scroll" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">News Today</h4>
+      </div>
+      <div class="modal-body list-group" id="myModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide fade filter" id="filterModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="filterModalLabel">Sources</h4>
+		<h5><i>Pick the sources you want to include</i></h5>
+      </div>
+      <div class="modal-body">
+      	<div class="input-group">
+      	<div class="span6">
+      	<div class="col-md-2 input-group-addon list-group">
+      	 <input type="checkbox" value="reddit" id="reddit" class="list-group-item">
+      	<a href="http://www.reddit.com" target="_blank">
+        <img src="css/bootstrap/img/reddit-logo1.png" class="filter-img" alt="Reddit" class="list-group-item" ></img>
+        </a></div>
+		<div class="col-md-2 input-group-addon">
+		 <input type="checkbox" value="guardian" id="guardian" class="list-group-item">
+		 <a href="http://www.theguardian.com/" target="_blank">
+		<img src="css/bootstrap/img/the-guardian-logo.jpg" class="filter-img" alt="Guardian" class="list-group-item"`></a></img></div>
+		</div>
+		<div class="span6">
+		<div class="col-md-2 input-group-addon">
+		 <input type="checkbox" value="nyt" id="nyt" class="list-group-item">
+		 <a href="http://www.nytimes.com/" target="_blank">
+		<img src="css/bootstrap/img/the-new-york-times-logo.jpg" class="filter-img" alt="New York Times" class="list-group-item">
+		</a></img></div>
+		<div class="col-md-2 input-group-addon">
+		 <input type="checkbox" value="twitter" id="twitter" class="list-group-item">
+		 <a href="http://www.twitter.com" target="_blank">
+		<img src="css/bootstrap/img/Twitter-LOGO.png" class="filter-img" alt="Twitter" class="list-group-item"></a></img></div></div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveFilter()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide fade filter overflow-scroll" id="archiveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="archiveModalLabel">Archived Stories</h4>
+      </div>
+      <div class="modal-body" id="archiveModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<script>
+
+	$('#myModal').on('show.bs.modal', function (e) {
+		$('#myModal').modal({ 
+        show:false
+         })
+    });
+	$('#filterModal').find('.modal-body').css({
+              width:'auto', //probably not needed
+              height:'auto', //probably not needed 
+              'max-height':'100%',
+			  'max-width':'100%'
+       });
+	 $('#archiveModal').find('.modal-body').css({
+              'max-height':'100%'
+       });
+	  $('#filterModal').on('hidden', function () {
+        document.location.reload();
+        });
+</script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("img/trianglify-background.jpg", {speed: 500});
+    
+    $("#light").click(function (e) {
+        console.log("In");
+      e.preventDefault();
+      $.backstretch("img/trianglify-background-blue.jpg");
+      console.log("Light Theme Clicked");
+    });
+    
+    $("#dark").click(function (e) {
+      e.preventDefault();
+      $.backstretch("img/trianglify-background.jpg");
+      console.log("Dark Theme Clicked");
+    });
+</script>
+    </body>
+</html>
