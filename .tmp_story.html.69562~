@@ -8,21 +8,17 @@
         <meta http-equiv="Content-Type" content=
         "text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="js/pace/pace.js"></script>
-<link href="css/pace/pace-theme-loading-bar.css" rel="stylesheet" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-</script>
-
 <script type="text/javascript" src="js/stories.js">
 </script>
 <script type="text/javascript" src="js/main.js">
 </script>
-
+<script type="text/javascript" src=
+"http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
 <script type="text/javascript" src="css/bootstrap/js/bootstrap.js">
 </script>
 <script type="text/javascript" src="css/bootstrap/js/sumTrends.js">
 </script>
-
 
         <title>NewsMash</title>
         <link type="text/css" rel="stylesheet" href=
@@ -31,8 +27,7 @@
         "css/bootstrap/css/mystyle.css" />
 		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/flaticon.css" />
 		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
-
-		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Bree+Serif|Bitter|Playfair+Display|Philosopher|Droid+Serif' rel='stylesheet' type='text/css'></link>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body class="landing" onload="setStoryPage()" >
     <div class="container-fluid">
@@ -70,7 +65,7 @@
 			</span>
 			<span>
 				<p class="text-right">
-					<button class="btn philosopher blue" id="light">Light Theme</button>
+					<button class="btn philosopher" id="light">Light Theme</button>
 					<button class="btn btn-inverse philosopher" id="dark">Dark Theme</button>
 				</p>
 			</span>
@@ -156,11 +151,6 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-	$( document ).ready(function() {
-    console.log( "ready!" );
-	});
-</script>
 <script type="text/javascript">
            $('.collapse').collapse()
            $('#createInput').click(function(){
