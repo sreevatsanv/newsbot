@@ -27,8 +27,7 @@
         "css/bootstrap/css/mystyle.css" />
 		<link type="text/css" rel="stylesheet" href="css/bootstrap/css/flaticon.css" />
 		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
-
-		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Bree+Serif|Bitter|Playfair+Display|Philosopher|Droid+Serif' rel='stylesheet' type='text/css'></link>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body class="landing" onload="setStoryPage()" >
     <div class="container-fluid">
@@ -62,11 +61,11 @@
         <div class="container-fluid" id="storypage">
 			<span>
             <h1 class="row-fluid storytitle" id="title"></h1>
-            <input type="text" id="search" size="20" Placeholder="Filter.."/>
+            <input type="text" id="search" size="20" Placeholder="Search.."/>
 			</span>
 			<span>
 				<p class="text-right">
-					<button class="btn philosopher blue" id="light">Light Theme</button>
+					<button class="btn philosopher" id="light">Light Theme</button>
 					<button class="btn btn-inverse philosopher" id="dark">Dark Theme</button>
 				</p>
 			</span>
