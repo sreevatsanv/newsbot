@@ -12,9 +12,9 @@ function test(){
 	if(localStorage.getItem("twitter") === null) localStorage.setItem("twitter","True");
 }
 function setTech(){
-	bdy = document.getElementsByClassName('modal-body');
-	for(i=0; i <bdy[0].childNodes.length;i++){
-		bdy[0].removeChild(bdy[0].childNodes[i]);
+	bdy = document.getElementById('myModalBody');
+	for(i=0; i <bdy.childNodes.length;i++){
+		bdy.removeChild(bdy.childNodes[i]);
 	}
 	for(var el in STORIES["technology"]){
 		//console.log(el);
@@ -28,13 +28,13 @@ function setTech(){
 			link.onclick = function(){
 				setStoryPage()
 			}
-			bdy[0].appendChild(link);
+			bdy.appendChild(link);
 	}
 }
 function setEntertain(){
-	bdy = document.getElementsByClassName('modal-body');
-	for(i=0; i <bdy[0].childNodes.length;i++){
-		bdy[0].removeChild(bdy[0].childNodes[i]);
+	bdy = document.getElementById('myModalBody');
+	for(i=0; i <bdy.childNodes.length;i++){
+		bdy.removeChild(bdy.childNodes[i]);
 	}
 	for(var el in STORIES["entertainment"]){
 		//console.log(STORIES["entertainment"][el])
@@ -47,13 +47,13 @@ function setEntertain(){
 			link.onclick = function(){
 				setStoryPage()
 			};
-			bdy[0].appendChild(link);
+			bdy.appendChild(link);
 	}
 }
 function setFin(){
-	bdy = document.getElementsByClassName('modal-body');
-	for(i=0; i <bdy[0].childNodes.length;i++){
-		bdy[0].removeChild(bdy[0].childNodes[i]);
+	bdy = document.getElementById('myModalBody');
+	for(i=0; i <bdy.childNodes.length;i++){
+		bdy.removeChild(bdy.childNodes[i]);
 	}
 	for(var el in STORIES["finance"]){
 		//console.log(STORIES["finance"][el])
@@ -66,13 +66,13 @@ function setFin(){
 			link.onclick = function(){
 				setStoryPage()
 			};
-			bdy[0].appendChild(link);
+			bdy.appendChild(link);
 	}
 }
 function setPol(){
-	bdy = document.getElementsByClassName('modal-body');
-	for(i=0; i <bdy[0].childNodes.length;i++){
-		bdy[0].removeChild(bdy[0].childNodes[i]);
+	bdy = document.getElementById('myModalBody');
+	for(i=0; i <bdy.childNodes.length;i++){
+		bdy.removeChild(bdy.childNodes[i]);
 	}
 	for(var el in STORIES["politics"]){
 		//console.log(STORIES["politics"][el])
@@ -85,16 +85,16 @@ function setPol(){
 			link.onclick = function(){
 				setStoryPage()
 			};
-			bdy[0].appendChild(link);
+			bdy.appendChild(link);
 	}
 }
 function setSport(){
-	bdy = document.getElementsByClassName('modal-body');
+	bdy = document.getElementById('myModalBody');
+	for(i=0; i <bdy.childNodes.length;i++){
+			bdy.removeChild(bdy.childNodes[i]);
+	}
 	for(var el in STORIES["sports"]){
 		//console.log(STORIES["sports"][el])
-		for(i=0; i <bdy[0].childNodes.length;i++){
-			bdy[0].removeChild(bdy[0].childNodes[i]);
-		}
 			link = document.createElement("a");
 			str = "story.html?written=false?category=sports?title="+el;
 			//console.log(str);
@@ -104,7 +104,7 @@ function setSport(){
 			link.onclick = function(){
 				setStoryPage()
 			};
-			bdy[0].appendChild(link);
+			bdy.appendChild(link);
 	}
 }
 function setStoryPage(){

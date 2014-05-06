@@ -15,6 +15,14 @@ body {
         display: block;
     }
 }
+.modal-large {
+	width: 960px;
+	left: 40%;
+
+}
+.blue {
+	color: #0195FF;
+}
 
 .summary{
 	float:right;
@@ -31,10 +39,16 @@ body {
   font-family: "Bitter", serif;
   font-size: 48px;
 }
-
+.videomodal {
+	width: 900px;
+	height: 490px;
+}
 .droid {
-  font-family:"Droid Serif",sans-serif;
-
+  font-family:"Droid Serif",serif;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .philosopher {
@@ -48,6 +62,10 @@ body {
   display: -webkit-flex;
   display: flex;
 }
+.green {
+	color: #3EBB43;
+}
+
 .box{
 	font:"Comic Sans MS";
 	font-size:medium;
